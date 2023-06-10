@@ -34,6 +34,10 @@ public class CidadeService {
             throw new CampoNaoInformadoException("Estado");
         }
         
+        if (cidade.getEstado() == null) {
+            throw new CampoNaoInformadoException("Estado");
+        }
+        
         if (cidade.getNome().length() > 60) {
             throw new TamanhoCampoInvalidoException("Nome", 60);
         }

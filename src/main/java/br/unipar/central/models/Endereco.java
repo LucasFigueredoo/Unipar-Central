@@ -8,7 +8,7 @@ package br.unipar.central.models;
  *
  * @author andersonbosing
  */
-public class Endereco {
+public class Endereco extends AbstractBaseEntity{
     
     private int id;
     private String logradouro;

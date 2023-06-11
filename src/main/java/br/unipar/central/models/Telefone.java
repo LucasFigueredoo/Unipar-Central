@@ -4,6 +4,8 @@
  */
 package br.unipar.central.models;
 
+import br.unipar.central.enums.TipoOperadoraEnum;
+
 /**
  *
  * @author andersonbosing
@@ -12,15 +14,19 @@ public class Telefone {
     
     private int id;
     private String numero;
-    private String operadora;
+    private TipoOperadoraEnum operadora;
+    private Pessoa pessoa;
+    private Agencia agencia; 
 
     public Telefone() {
     }
 
-    public Telefone(int id, String numero, String operadora) {
+    public Telefone(int id, String numero, TipoOperadoraEnum operadora, Pessoa pessoa, Agencia agencia) {
         this.id = id;
         this.numero = numero;
         this.operadora = operadora;
+        this.pessoa = pessoa;
+        this.agencia = agencia;
     }
 
     public int getId() {
@@ -39,17 +45,33 @@ public class Telefone {
         this.numero = numero;
     }
 
-    public String getOperadora() {
+    public TipoOperadoraEnum getOperadora() {
         return operadora;
     }
 
-    public void setOperadora(String operadora) {
+    public void setOperadora(TipoOperadoraEnum operadora) {
         this.operadora = operadora;
+    }
+
+    public Pessoa getPessoa() {
+        return pessoa;
+    }
+
+    public void setPessoa(Pessoa pessoa) {
+        this.pessoa = pessoa;
+    }
+
+    public Agencia getAgencia() {
+        return agencia;
+    }
+
+    public void setAgencia(Agencia agencia) {
+        this.agencia = agencia;
     }
 
     @Override
     public String toString() {
-        return "Telefone{" + "id=" + id + ", numero=" + numero + ", operadora=" + operadora + '}';
+        return "Telefone{" + "id=" + id + ", numero=" + numero + ", operadora=" + operadora + ", pessoa=" + pessoa + ", agencia=" + agencia + '}';
     }
 
 }

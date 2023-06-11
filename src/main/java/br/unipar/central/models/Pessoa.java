@@ -4,7 +4,6 @@
  */
 package br.unipar.central.models;
 
-import br.unipar.central.enums.TipoPessoaEnum;
 import java.sql.Date;
 import java.util.ArrayList;
 

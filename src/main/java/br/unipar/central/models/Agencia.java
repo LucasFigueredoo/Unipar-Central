@@ -10,6 +10,7 @@ package br.unipar.central.models;
  */
 public class Agencia extends AbstractBaseEntity{
     
+    private int id;
     private String codigo;
     private String digito;
     private String razaoSocial;
@@ -19,12 +20,21 @@ public class Agencia extends AbstractBaseEntity{
     public Agencia() {
     }
 
-    public Agencia(String codigo, String digito, String razaoSocial, String cnpj, Banco banco) {
+    public Agencia(int id, String codigo, String digito, String razaoSocial, String cnpj, Banco banco) {
+        this.id = id;
         this.codigo = codigo;
         this.digito = digito;
         this.razaoSocial = razaoSocial;
         this.cnpj = cnpj;
         this.banco = banco;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getCodigo() {
@@ -69,7 +79,7 @@ public class Agencia extends AbstractBaseEntity{
 
     @Override
     public String toString() {
-        return "Agencia{" + "codigo=" + codigo + ", digito=" + digito + ", razaoSocial=" + razaoSocial + ", cnpj=" + cnpj + ", banco=" + banco + '}';
+        return "Agencia{" + "id=" + id + ", codigo=" + codigo + ", digito=" + digito + ", razaoSocial=" + razaoSocial + ", cnpj=" + cnpj + ", banco=" + banco + '}';
     }
-    
+   
 }

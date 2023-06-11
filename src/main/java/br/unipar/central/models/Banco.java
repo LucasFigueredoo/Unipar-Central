@@ -10,13 +10,23 @@ package br.unipar.central.models;
  */
 public class Banco extends AbstractBaseEntity{
     
+    private int id;
     private String nome;
 
     public Banco() {
     }
 
-    public Banco(String nome) {
+    public Banco(int id, String nome) {
+        this.id = id;
         this.nome = nome;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNome() {
@@ -29,7 +39,7 @@ public class Banco extends AbstractBaseEntity{
 
     @Override
     public String toString() {
-        return "Banco{" + "nome=" + nome + '}';
+        return "Banco{" + "id=" + id + ", nome=" + nome + '}';
     }
     
 }

@@ -10,29 +10,21 @@ import java.util.ArrayList;
 
 /**
  *
- * @author andersonbosing
+ * @author 00240578
  */
 public class Pessoa {
     
     private int id;
-    private String nome;
-    private String documento;
-    private Date dtNascimento;
-    private TipoPessoaEnum tipoPessoa;
-    private ArrayList<Endereco> enderecos;
-    private ArrayList<Telefone> telefones;
+    private String email;
+    private String ra;
 
     public Pessoa() {
     }
-
-    public Pessoa(int id, String nome, String documento, Date dtNascimento, TipoPessoaEnum tipoPessoa, ArrayList<Endereco> enderecos, ArrayList<Telefone> telefones) {
+    
+    public Pessoa(int id, String email, String ra) {
         this.id = id;
-        this.nome = nome;
-        this.documento = documento;
-        this.dtNascimento = dtNascimento;
-        this.tipoPessoa = tipoPessoa;
-        this.enderecos = enderecos;
-        this.telefones = telefones;
+        this.email = email;
+        this.ra = ra;
     }
 
     public int getId() {
@@ -43,57 +35,25 @@ public class Pessoa {
         this.id = id;
     }
 
-    public String getNome() {
-        return nome;
+    public String getEmail() {
+        return email;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public String getDocumento() {
-        return documento;
+    public String getRa() {
+        return ra;
     }
 
-    public void setDocumento(String documento) {
-        this.documento = documento;
-    }
-
-    public Date getDtNascimento() {
-        return dtNascimento;
-    }
-
-    public void setDtNascimento(Date dtNascimento) {
-        this.dtNascimento = dtNascimento;
-    }
-
-    public TipoPessoaEnum getTipoPessoa() {
-        return tipoPessoa;
-    }
-
-    public void setTipoPessoa(TipoPessoaEnum tipoPessoa) {
-        this.tipoPessoa = tipoPessoa;
-    }
-
-    public ArrayList<Endereco> getEnderecos() {
-        return enderecos;
-    }
-
-    public void setEnderecos(ArrayList<Endereco> enderecos) {
-        this.enderecos = enderecos;
-    }
-
-    public ArrayList<Telefone> getTelefones() {
-        return telefones;
-    }
-
-    public void setTelefones(ArrayList<Telefone> telefones) {
-        this.telefones = telefones;
+    public void setRa(String ra) {
+        this.ra = ra;
     }
 
     @Override
     public String toString() {
-        return "Pessoa{" + "id=" + id + ", nome=" + nome + ", documento=" + documento + ", dtNascimento=" + dtNascimento + ", tipoPessoa=" + tipoPessoa + ", enderecos=" + enderecos + ", telefones=" + telefones + '}';
+        return "Pessoa{" + "id=" + id + ", email=" + email + ", ra=" + ra + '}';
     }
     
 }

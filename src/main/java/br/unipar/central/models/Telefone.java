@@ -10,7 +10,7 @@ import br.unipar.central.enums.TipoOperadoraEnum;
  *
  * @author andersonbosing
  */
-public class Telefone {
+public class Telefone extends AbstractBaseEntity{
     
     private int id;
     private String numero;

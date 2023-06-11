@@ -25,7 +25,7 @@ public class EnderecoDAO {
     
     private static final String FIND_ALL =
             "SELECT ID, LOGRADOURO, NUMERO, BAIRRO, CEP, COMPLEMENTO, RA, PESSOA_ID, CIDADE_ID " +
-            "FROM ENDERECO ";
+            "FROM ENDERECO";
     
     private static final String FIND_BY_ID =
             "SELECT ID, LOGRADOURO, NUMERO, BAIRRO, CEP, COMPLEMENTO, RA, PESSOA_ID, CIDADE_ID" +
@@ -201,7 +201,20 @@ public class EnderecoDAO {
         Connection conn = null;
         PreparedStatement pstmt = null;
         
-        
+        try {
+            
+            conn = new DatabaseUtils().getConnection();
+            pstmt = conn.prepareStatement(DELETE_BY_ID);
+            pstmt.setInt(1, id);
+            
+            pstmt.executeUpdate();
+            
+        } finally {
+            if (pstmt != null)
+                pstmt.close();
+            if (conn != null)
+                conn.close();
+        }
         
     }
     

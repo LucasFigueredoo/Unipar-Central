@@ -12,19 +12,17 @@ import java.util.ArrayList;
  *
  * @author 00240578
  */
-public class Pessoa {
+public class Pessoa extends AbstractBaseEntity {
     
     private int id;
     private String email;
-    private String ra;
 
     public Pessoa() {
     }
     
-    public Pessoa(int id, String email, String ra) {
+    public Pessoa(int id, String email) {
         this.id = id;
         this.email = email;
-        this.ra = ra;
     }
 
     public int getId() {
@@ -43,17 +41,9 @@ public class Pessoa {
         this.email = email;
     }
 
-    public String getRa() {
-        return ra;
-    }
-
-    public void setRa(String ra) {
-        this.ra = ra;
-    }
-
     @Override
     public String toString() {
-        return "Pessoa{" + "id=" + id + ", email=" + email + ", ra=" + ra + '}';
+        return "Pessoa{" + "id=" + id + ", email=" + email + '}';
     }
     
 }

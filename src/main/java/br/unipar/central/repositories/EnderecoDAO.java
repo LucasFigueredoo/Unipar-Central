@@ -201,20 +201,7 @@ public class EnderecoDAO {
         Connection conn = null;
         PreparedStatement pstmt = null;
         
-         try {
-            
-            conn = new DatabaseUtils().getConnection();
-            pstmt = conn.prepareStatement(DELETE_BY_ID);
-            pstmt.setInt(1, id);
-            
-            pstmt.executeUpdate();
-            
-        } finally {
-            if (pstmt != null)
-                pstmt.close();
-            if (conn != null)
-                conn.close();
-        }
+        
         
     }
     

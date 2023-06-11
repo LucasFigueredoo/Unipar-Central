@@ -131,7 +131,7 @@ public class EnderecoService {
         
         EnderecoDAO enderecoDAO = new EnderecoDAO();
         enderecoDAO.delete(id);
-        
+           
         
     }
     

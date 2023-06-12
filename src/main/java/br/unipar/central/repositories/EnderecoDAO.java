@@ -66,6 +66,9 @@ public class EnderecoDAO {
                endereco.setRegistroAcademico(rs.getString("RA"));
                endereco.setPessoa(new PessoaDAO().findById(rs.getInt("PESSOA_ID")));
                endereco.setCidade(new CidadeDAO().findById(rs.getInt("CIDADE_ID")));
+               
+               retorno.add(endereco);
+               
             }
             
         } finally {

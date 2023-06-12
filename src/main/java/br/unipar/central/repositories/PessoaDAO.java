@@ -60,6 +60,8 @@ public class PessoaDAO {
                 pessoa.setEmail(rs.getString("EMAIL"));
                 pessoa.setRegistroAcademico(rs.getString("RA"));
                 
+                retorno.add(pessoa);
+                
             }
             
         } finally {
